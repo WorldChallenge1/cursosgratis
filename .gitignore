@@ -1,0 +1,11 @@
+node_modules/
+node_modules
+duplicate.html
+failure.html
+logo.png
+logo.svg
+requests.txt
+succes.html
+test.js
+test.py
+package-lock.json
