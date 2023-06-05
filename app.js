@@ -3,6 +3,7 @@ const bodyParser = require("body-parser")
 const request = require("request")
 const url = require("url")
 const http = require("http")
+const https = require("https")
 
 const app = express()
 const port = process.env.PORT || 3500
@@ -20,14 +21,14 @@ app.post("/subscribe", (req, res) => {
   let email = req.body.email
   email = email.toLowerCase()
 
-  const hostname = "cursosgratis.pythonanywhere.com"
+  const hostname = "cursosgratisapi.onrender.com"
 
   const options = {
     hostname: hostname,
     path: "/subscribe?email=" + email,
     method: "GET"
   }
-  const request = http.request(options, (response) => {
+  const request = https.request(options, (response) => {
     console.log(`statusCode: ${response.statusCode}`)
     if (response.statusCode === 201) {
       console.log("success")
@@ -59,7 +60,7 @@ app.post("/unsubscribe", (req, res) => {
   let email = req.body.email
   email = email.toLowerCase()
 
-  const hostname = "cursosgratis.pythonanywhere.com"
+  const hostname = "cursosgratisapi.onrender.com"
 
   const options = {
     hostname: hostname,
@@ -67,7 +68,7 @@ app.post("/unsubscribe", (req, res) => {
     method: "GET"
   }
 
-  const request = http.request(options, (response) => {
+  const request = https.request(options, (response) => {
     console.log(`statusCode: ${response.statusCode}`)
 
     if (response.statusCode === 200) {
