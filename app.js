@@ -20,7 +20,7 @@ app.post("/subscribe", (req, res) => {
   let email = req.body.email
   email = email.toLowerCase()
 
-  const hostname = "worldchallenge.pythonanywhere.com"
+  const hostname = "api-three-indol.vercel.app"
 
   const options = {
     hostname: hostname,
@@ -59,7 +59,7 @@ app.post("/unsubscribe", (req, res) => {
   let email = req.body.email
   email = email.toLowerCase()
 
-  const hostname = "worldchallenge.pythonanywhere.com"
+  const hostname = "api-three-indol.vercel.app"
 
   const options = {
     hostname: hostname,
